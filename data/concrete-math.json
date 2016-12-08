@@ -1,0 +1,105 @@
+[
+    {
+        "name": "Recurrent Problems",
+        "children": [
+            {"name": "The Tower of Hanoi"},
+            {"name": "Lines in the Plane"},
+            {"name": "The Josephus Problem"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Sums",
+        "children": [
+            {"name": "Notation"},
+            {"name": "Sums and Recurrences"},
+            {"name": "Manipulation of Sums"},
+            {"name": "Multiple Sums"},
+            {"name": "General Methods"},
+            {"name": "Finite and Infinite Calculus"},
+            {"name": "Infinite Sums"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Integer Functions",
+        "children": [
+            {"name": "Floors and Ceilings"},
+            {"name": "Floor/Ceiling Applications"},
+            {"name": "Floor/Ceiling Recurrences"},
+            {"name": "'mod': The Binary Operation"},
+            {"name": "Floor/Ceiling Sums"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Number Theory",
+        "children": [
+            {"name": "Divisibility"},
+            {"name": "Primes"},
+            {"name": "Prime Examples"},
+            {"name": "Factorial Factors"},
+            {"name": "Relative Primality"},
+            {"name": "'mod': The Congruence Relation"},
+            {"name": "Independent Residues"},
+            {"name": "Additional Applications"},
+            {"name": "Phi and Mu"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Binomial Coefficients",
+        "children": [
+            {"name": "Basic Identities"},
+            {"name": "Basic Practice"},
+            {"name": "Tricks of the Trade"},
+            {"name": "Generating Functions"},
+            {"name": "Hypergeometric Functions"},
+            {"name": "Hypergeometric Transformations"},
+            {"name": "Partial Hypergeometric Sums"},
+            {"name": "Mechanical Summation"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Special Numbers",
+        "children": [
+            {"name": "Stirling Numbers"},
+            {"name": "Eulerian Numbers"},
+            {"name": "Harmonic Numbers"},
+            {"name": "Harmonic Summation"},
+            {"name": "Bernoulli Numbers"},
+            {"name": "Fibonacci Numbers"},
+            {"name": "Continuants"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Generating Functions",
+        "children": [
+            {"name": "Domino Theory and Change"},
+            {"name": "Basic Maneuvers"},
+            {"name": "Solving Recurrences"},
+            {"name": "Special Generating Functions"},
+            {"name": "Convolutions"},
+            {"name": "Exponential Generating Functions"},
+            {"name": "Dirichlet Generating Functions"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Discrete Probability",
+        "children": [
+            {"name": "Definitions"},
+            {"name": "Mean and Variance"},
+            {"name": "Probability Generating Functions"},
+            {"name": "Flipping Coins"},
+            {"name": "Hashing"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Asymptotics",
+        "children": [
+            {"name": "A Hierarchy"},
+            {"name": "O Notation"},
+            {"name": "O Manipulation"},
+            {"name": "Two Asymptotic Tricks"},
+            {"name": "Euler's Summation Formula"},
+            {"name": "Final Summations"},
+            {"name": "Exercises"}
+        ]
+    }
+]

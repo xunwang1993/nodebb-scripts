@@ -1,0 +1,89 @@
+#!/usr/bin/env node
+var nconf = require('nconf');
+var colors = require('colors'),
+    cproc = require('child_process'),
+    argv = require('minimist')(process.argv.slice(2)),
+    fs = require('fs'),
+    path = require('path'),
+    request = require('request'),
+    semver = require('semver'),
+    prompt = require('prompt'),
+    async = require('async');
+
+nconf.argv().env().file({
+    file: path.join(__dirname, '/config.json')
+});
+
+var cid = parseInt(process.argv[2]);
+var jsonFile = process.argv[3];
+
+var testCid = 1000;
+
+if (!cid || !jsonFile) {
+    return;
+}
+
+require('./src/database').init(function (err) {
+    if(err) {
+        winston.error(err.stack);
+        process.exit();
+    }
+    require('./src/meta').configs.init(function () {
+        console.log(cid);
+        console.log(jsonFile);
+
+        fs.readFile(jsonFile, function (err, categoriesStr) {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            var data = JSON.parse(categoriesStr);
+
+            function _recursive(categories, i, parentCid, callback) {
+                var item = categories[i];
+                if (!item) {
+                    if(callback){
+                        callback();
+                    }
+                    return;
+                }
+                create_category(item, parentCid, function(err, category){
+                    if (err || !category || !category.cid) {
+                        console.error(err);
+                        return;
+                    }
+
+                    if (item.children && item.children.length) {
+                        _recursive(item.children, 0, category.cid, function() {
+                            _recursive(categories, i+1, parentCid, callback);
+                        });
+                    } else {
+                        _recursive(categories, i+1, parentCid, callback);
+                    }
+
+
+                });
+            }
+
+            _recursive(data, 0, cid);
+        });
+    });
+});
+
+function create_category(item, parentCid, callback) {
+    var Categories = require('./src/categories');
+    var data = {
+        name: item.name,
+        parentCid: parentCid
+    };
+    Categories.create(data, callback);
+    // test_create(data, callback);
+
+}
+
+function test_create(category, callback) {
+    testCid += 1;
+    category.cid = testCid;
+    console.log(category);
+    callback(null, category);
+}
