@@ -1,0 +1,32 @@
+{
+  "name": "nodebb-scripts",
+  "version": "0.0.1",
+  "description": "Some scripts for V2MM, which is based on NodeBB",
+  "main": "create-categories",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revir/nodebb-scripts.git"
+  },
+  "keywords": [
+    "nodebb",
+    "scripts",
+    "backup",
+    "mongo"
+  ],
+  "author": "River",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revir/nodebb-scripts/issues"
+  },
+  "homepage": "https://github.com/revir/nodebb-scripts#readme",
+  "dependencies": {
+    "async": "*",
+    "shelljs-nodecli": "*",
+    "archiver": "*",
+    "fs-extra": "*",
+    "moment": "*"
+  }
+}
