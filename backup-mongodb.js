@@ -86,8 +86,8 @@ nodeCLI.exec(
     'mongodump',
     '-v',
     '-d', config.mongo.database,
-    '-u', config.mongo.username || '',
-    '-p', '"' + (config.mongo.password || '') + '"',
+    config.mongo.username ? '-u '+config.mongo.username : '',
+    config.mongo.password ? '-p '+'"'+config.mongo.password+'"' : '',
     '-o', tempBackupDir,
     '-h', config.mongo.host + ":" + config.mongo.port
 );
