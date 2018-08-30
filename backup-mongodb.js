@@ -99,7 +99,7 @@ nodeCLI.exec(
 
 var timeString = moment().format("YYYY-MM-DD");
 var backupFileName = "nodebb-db-" + config.mongo.database + '-' + timeString + '.zip';
-var outputFilePath = path.join(pwd, "..", backupFileName);
+var outputFilePath = path.join(pwd, "../nodebb-backup", backupFileName);
 var output = fs.createWriteStream(outputFilePath);
 var archive = archiver('zip');
 

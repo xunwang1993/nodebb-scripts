@@ -15,7 +15,7 @@ if (!fs.existsSync(pwd + '/config.json')) {
 
 var timeString = moment().format("YYYY-MM-DD");
 var backupFileName = "nodebb-dir-" + timeString + '.zip';
-var outputFilePath = path.join(pwd, "..", backupFileName);
+var outputFilePath = path.join(pwd, "../nodebb-backup", backupFileName);
 var output = fs.createWriteStream(outputFilePath);
 var archive = archiver('zip');
 
